@@ -1,14 +1,18 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import agent from "../../api/agent";
+import { useLocation } from "react-router";
 
 export const useActivities = (id?: string) => {
   const queryClient = useQueryClient();
+  const loction = useLocation();
+
   const { data: activities, isPending } = useQuery({
     queryKey: ["activities"],
     queryFn: async () => {
       const response = await agent.get<Activity[]>("/activities");
       return response.data;
     },
+    enabled: !id && loction.pathname === "/activities", // Only fetch if id is not provided and the path is correct
   });
 
   const { data: activity, isLoading: isLoadingActivity } = useQuery({
