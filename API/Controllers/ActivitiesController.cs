@@ -3,6 +3,7 @@ using Application.Activities.DTOs;
 using Application.Activities.Queries;
 using Domain;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Persistence;
 
@@ -25,13 +26,17 @@ public class ActivitiesController : BaseApiController
     [HttpPost]
     public async Task<ActionResult<string>> CreateActivity(CreateActivityDto activity)
     {
-        return HandleResult( await Mediator.Send(new CreateActivity.Command { ActivityDto = activity }));
+        return HandleResult(
+            await Mediator.Send(new CreateActivity.Command { ActivityDto = activity })
+        );
     }
 
     [HttpPut]
     public async Task<ActionResult> EditActivity(EditActivityDto activity)
     {
-        return HandleResult (await Mediator.Send(new EditActivity.Command { ActivityDto = activity }));
+        return HandleResult(
+            await Mediator.Send(new EditActivity.Command { ActivityDto = activity })
+        );
     }
 
     [HttpDelete("{id}")]
