@@ -2,7 +2,7 @@ using System;
 
 namespace Application.Core;
 
-public class Results<T>
+public class Result<T>
 {
     public bool IsSuccess { get; set; }
     public T? Value { get; set; }
@@ -11,7 +11,13 @@ public class Results<T>
 
     public int Code { get; set; }
 
-    public static Results<T> Success(T value) => new() { IsSuccess = true, Value = value }; 
+    public static Result<T> Success(T value) => new() { IsSuccess = true, Value = value };
 
-    public static Results<T> Failure(string error, int code) => new() { IsSuccess = false, Error = error, Code = code }; 
+    public static Result<T> Failure(string error, int code) =>
+        new()
+        {
+            IsSuccess = false,
+            Error = error,
+            Code = code,
+        };
 }

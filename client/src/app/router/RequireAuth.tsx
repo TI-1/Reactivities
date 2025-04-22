@@ -1,5 +1,5 @@
 import { Navigate, Outlet, useLocation } from "react-router";
-import { useAccount } from "../../../lib/types/hooks/useAccount";
+import { useAccount } from "../../lib/types/hooks/useAccount";
 import { Typography } from "@mui/material";
 
 export default function RequireAuth() {

@@ -1,7 +1,7 @@
 import axios from "axios";
 import { store } from "../stores/store";
 import { toast } from "react-toastify";
-import { router } from "../../app/layout/router/Routes";
+import { router } from "../../app/router/Routes";
 
 const sleep = (delay: number) => {
   return new Promise((resolve) => {

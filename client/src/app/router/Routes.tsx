@@ -1,16 +1,16 @@
 import { createBrowserRouter, Navigate } from "react-router";
-import App from "../App";
-import ActivityDashboard from "../../../features/activities/dashboard/ActivityDashboard";
-import ActivityForm from "../../../features/activities/form/ActivityForm";
-import HomePage from "../../../features/home/HomePage";
-import ActivityDetailPage from "../../../features/activities/details/ActivityDetailPage";
-import Counter from "../../../features/activities/Counter";
-import TestErrors from "../../../features/errors/TestErrors";
-import NotFound from "../../../features/errors/NotFound";
-import ServerError from "../../../features/errors/ServerError";
-import LoginForm from "../../../features/account/LoginForm";
+import LoginForm from "../../features/account/LoginForm";
+import RegisterForm from "../../features/account/RegisterForm";
+import Counter from "../../features/activities/Counter";
+import ActivityDashboard from "../../features/activities/dashboard/ActivityDashboard";
+import ActivityDetailPage from "../../features/activities/details/ActivityDetailPage";
+import ActivityForm from "../../features/activities/form/ActivityForm";
+import NotFound from "../../features/errors/NotFound";
+import ServerError from "../../features/errors/ServerError";
+import TestErrors from "../../features/errors/TestErrors";
+import HomePage from "../../features/home/HomePage";
+import App from "../layout/App";
 import RequireAuth from "./RequireAuth";
-import RegisterForm from "../../../features/account/RegisterForm";
 
 export const router = createBrowserRouter([
   {
