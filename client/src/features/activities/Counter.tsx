@@ -7,7 +7,7 @@ import {
   Paper,
   Typography,
 } from "@mui/material";
-import { useStore } from "../../lib/types/hooks/useStore";
+import { useStore } from "../../lib/hooks/useStore";
 import { observer } from "mobx-react-lite";
 
 const Counter = observer(function Counter() {
@@ -44,7 +44,7 @@ const Counter = observer(function Counter() {
           </Button>
         </ButtonGroup>
       </Box>
-      <Paper sx={{ width: "40%", p:4 }}>
+      <Paper sx={{ width: "40%", p: 4 }}>
         <Typography variant="h5">
           Counter events ({counterStore.eventCount})
         </Typography>

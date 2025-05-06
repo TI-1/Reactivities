@@ -7,7 +7,7 @@ import {
   Typography,
 } from "@mui/material";
 import { useParams } from "react-router";
-import { useProfile } from "../../lib/types/hooks/useProfile";
+import { useProfile } from "../../lib/hooks/useProfile";
 import { useState } from "react";
 import PhotoUploadWidget from "../../app/shared/components/PhotoUploadWidget";
 import StarButton from "../../app/shared/components/StarButton";

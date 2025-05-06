@@ -1,7 +1,7 @@
 import { Grid, Typography } from "@mui/material";
 import ProfileHeader from "./ProfileHeader";
 import ProfileContent from "./ProfileContent";
-import { useProfile } from "../../lib/types/hooks/useProfile";
+import { useProfile } from "../../lib/hooks/useProfile";
 import { useParams } from "react-router";
 
 export default function ProfilePage() {

@@ -11,7 +11,7 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { useState } from "react";
 import { Link } from "react-router";
-import { useAccount } from "../../lib/types/hooks/useAccount";
+import { useAccount } from "../../lib/hooks/useAccount";
 
 export default function UserMenu() {
   const { currentUser, logoutUser } = useAccount();

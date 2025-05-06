@@ -10,9 +10,9 @@ import {
 } from "@mui/material";
 import { NavLink } from "react-router";
 import MenuItemLink from "../shared/components/MenuItemLink";
-import { useStore } from "../../lib/types/hooks/useStore";
+import { useStore } from "../../lib/hooks/useStore";
 import { Observer } from "mobx-react-lite";
-import { useAccount } from "../../lib/types/hooks/useAccount";
+import { useAccount } from "../../lib/hooks/useAccount";
 import UserMenu from "./UserMenu";
 
 export default function NavBar() {

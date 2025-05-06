@@ -1,7 +1,7 @@
 import { Card, CardMedia, Box, Typography, Chip } from "@mui/material";
 import { Link } from "react-router";
 import { formatDate } from "../../../lib/util/util";
-import { useActivities } from "../../../lib/types/hooks/UseActivities";
+import { useActivities } from "../../../lib/hooks/UseActivities";
 import StyledButton from "../../../app/shared/StyledButton";
 
 type Props = {

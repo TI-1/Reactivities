@@ -1,8 +1,8 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { loginSchema } from "../../schemas/loginSchema";
-import agent from "../../api/agent";
+import { loginSchema } from "../schemas/loginSchema";
+import agent from "../api/agent";
 import { useNavigate } from "react-router";
-import { RegisterSchema } from "../../schemas/RegisterSchema";
+import { RegisterSchema } from "../schemas/RegisterSchema";
 import { toast } from "react-toastify";
 
 export const useAccount = () => {
@@ -45,8 +45,7 @@ export const useAccount = () => {
       const response = await agent.get<User>("/account/user-info");
       return response.data;
     },
-    enabled:
-      !queryClient.getQueryData(["user"]) 
+    enabled: !queryClient.getQueryData(["user"]),
   });
 
   return {
