@@ -9,13 +9,13 @@ namespace API.SignalR;
 
 public class CommentHub(IMediator mediator) : Hub
 {
-
     public async Task SendComment(AddComment.Command command)
     {
         var commnet = await mediator.Send(command);
 
         await Clients.Group(command.ActivityId).SendAsync("ReceiveComment", commnet.Value);
     }
+
     public override async Task OnConnectedAsync()
     {
         var httpContext = Context.GetHttpContext();
